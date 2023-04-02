@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Website</title>
+    <title>Parallax Trees</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <header>
-        <a href="#" class="logo">Logo</a>
-        <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Trabalho</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
+        <h2 href="#" class="logo">Logo</h2>
+        <nav class="navegacao">
+            <a href="#" class="active">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Trabalho</a>
+            <a href="#">Contato</a>
+        </nav>
     </header>
 
-    <section>
-        
+    <section class="parallax">
+      
+        <img src="./img/hill1.png" id="hill1">
+        <img src="./img/hill2.png" id="hill2">
+        <img src="./img/hill3.png" id="hill3">  
+        <img src="./img/hill4.png" id="hill4">
+        <img src="./img/hill5.png" id="hill5">
+        <img src="./img/tree.png" id="tree"> 
+        <h2 id="text">Parallax Website</h2>
+        <img src="./img/leaf.png" id="leaf">
+        <img src="./img/plant.png" id="plant">
+
     </section>
 
     <div class="sec" id="sec">
@@ -29,8 +39,24 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod amet, deserunt, tempora enim rem architecto quos repellendus necessitatibus cumque, beatae voluptas facere! Unde consectetur quisquam corrupti. Rerum laboriosam voluptate, iste dolore praesentium quibusdam voluptatem autem, laudantium delectus sequi ipsam enim. Facere natus expedita odit rem dignissimos delectus deserunt sit eaque beatae, ut sunt voluptatem tempore atque repudiandae officia laboriosam rerum? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur ducimus inventore quos officiis deleniti? Voluptate numquam aliquid saepe eos libero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ratione dolore sed asperiores beatae voluptatibus, dolorum magni culpa optio temporibus? <br><br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus quo saepe perspiciatis fugit quas dicta voluptatem quasi, minima provident ipsam velit esse a, laboriosam nulla mollitia, vel accusamus praesentium. Nemo, dolores. Soluta repellendus iusto dolorem ipsa nulla distinctio eius ipsum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto cupiditate numquam laudantium animi consectetur, in eius repudiandae quia cumque minima?<br><br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, blanditiis, repudiandae ex rerum eos doloribus aliquid aperiam commodi ipsam magnam dolores officiis maxime, beatae saepe architecto deleniti libero dicta mollitia?<br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, et quasi beatae quam quisquam aut dolores! Earum incidunt, placeat rerum pariatur harum veritatis beatae praesentium sint impedit odio saepe ipsam illo odit vero laboriosam, tenetur dolorum. Accusantium unde corporis tenetur repellendus pariatur nobis officia voluptatem quo delectus alias praesentium est architecto, illum consequatur non aspernatur ducimus incidunt dicta, odio debitis qui? Optio quos, praesentium ipsam temporibus tempora officia ducimus saepe.</p>
     </div>
 
-    <script>
+    <script>     
+        let text = document.getElementById('text');
+        let leaf = document.getElementById('leaf');
+        let hill1 = document.getElementById('hill1');
+        let hill4 = document.getElementById('hill4');
+        let hill5 = document.getElementById('hill5');
 
+        window.addEventListener('scroll', () => {
+            let value = window.scrollY;
+
+            text.style.marginTop = value * 2.5 + 'px';
+            leaf.style.top = value * -1.5 + 'px';
+            leaf.style.left = value * 1.5 + 'px';
+            hill5.style.left = value * 1.5 + 'px';
+            hill4.style.left = value * -1.5 + 'px';
+            hill1.style.top = value * 1 + 'px';
+        })
+        
     </script>
 
 </body>

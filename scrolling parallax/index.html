@@ -25,14 +25,36 @@
         <img src="./img/parallax_lua.png" id="lua" alt="">
         <img src="./img/parallax_montanhas.png" id="montanhas_tras" alt="">
         <h2 id="text">Moon light</h2>
-        <a href="#" id="btn">Explore</a>
+        <a href="#sec" id="btn">Explore</a>
         <img src="./img/parallax_montanhas-frente.png" id="montanhas_frente" alt="">
     </section>
 
-    <div class="sec">
+    <div class="sec" id="sec">
         <h2>Parallax scrolling effects</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod amet, deserunt, tempora enim rem architecto quos repellendus necessitatibus cumque, beatae voluptas facere! Unde consectetur quisquam corrupti. Rerum laboriosam voluptate, iste dolore praesentium quibusdam voluptatem autem, laudantium delectus sequi ipsam enim. Facere natus expedita odit rem dignissimos delectus deserunt sit eaque beatae, ut sunt voluptatem tempore atque repudiandae officia laboriosam rerum? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur ducimus inventore quos officiis deleniti? Voluptate numquam aliquid saepe eos libero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ratione dolore sed asperiores beatae voluptatibus, dolorum magni culpa optio temporibus? <br><br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus quo saepe perspiciatis fugit quas dicta voluptatem quasi, minima provident ipsam velit esse a, laboriosam nulla mollitia, vel accusamus praesentium. Nemo, dolores. Soluta repellendus iusto dolorem ipsa nulla distinctio eius ipsum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto cupiditate numquam laudantium animi consectetur, in eius repudiandae quia cumque minima?<br><br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, blanditiis, repudiandae ex rerum eos doloribus aliquid aperiam commodi ipsam magnam dolores officiis maxime, beatae saepe architecto deleniti libero dicta mollitia?<br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, et quasi beatae quam quisquam aut dolores! Earum incidunt, placeat rerum pariatur harum veritatis beatae praesentium sint impedit odio saepe ipsam illo odit vero laboriosam, tenetur dolorum. Accusantium unde corporis tenetur repellendus pariatur nobis officia voluptatem quo delectus alias praesentium est architecto, illum consequatur non aspernatur ducimus incidunt dicta, odio debitis qui? Optio quos, praesentium ipsam temporibus tempora officia ducimus saepe.</p>
     </div>
+
+    <script>
+        let estrelas = document.getElementById('estrelas');
+        let lua = document.getElementById('lua');
+        let montanhas_tras = document.getElementById('montanhas_tras');
+        let montanhas_frente = document.getElementById('montanhas_frente');
+        let btn = document.getElementById('btn');
+        let text = document.getElementById('text');
+        let header =  document.querySelector('header');
+
+        window.addEventListener('scroll', function (){
+            let value = window.scrollY
+            estrelas.style.left = value * 0.25 + 'px';
+            lua.style.top = value * 1.05 + 'px';
+            montanhas_tras.style.top = value * 0.5 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+
+    </script>
 
 </body>
 </html>

@@ -56,3 +56,23 @@ h3{
 p{
     margin-bottom: 20px;
 }
+
+.voltar{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 99;
+}
+
+.voltar a{
+    padding: 6px 12px ;
+    background-color: #111111a4;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 200ms ease-in-out;
+    font-size: 14px;
+}
+
+.voltar a:hover{
+    background-color: #111;
+}
